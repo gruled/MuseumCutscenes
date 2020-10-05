@@ -20,20 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="632a2a91-130c-4bc7-850e-637705bc901c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_capsule/Materials/MAT_Vostok-1_capsule_equipment.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_capsule/Materials/MAT_Vostok-1_capsule_equipment.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_capsule/Materials/MAT_Vostok-1_capsule_wires.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_capsule/Materials/MAT_Vostok-1_capsule_wires.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_capsule/Vostok-1_capsule.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_capsule/Vostok-1_capsule.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_inside/Vostok-1_capsule_inside.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Uniday/VOSTOK-1/Vostok-1_inside/Vostok-1_capsule_inside.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/OuterRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New/Scripts/OuterRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stagit/SkyboxEarthPlanets/skyboxes/skyboxv1_europe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stagit/SkyboxEarthPlanets/skyboxes/skyboxv1_europe.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +57,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Changer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InnerRotate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveSkyBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs" />
         <option value="$PROJECT_DIR$/Assets/New/Scripts/ChangeState.cs" />
-        <option value="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/New/Scripts/ExposureSkyBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/New/Scripts/OuterRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs" />
       </list>
     </option>
   </component>
@@ -115,7 +107,7 @@
       <workItem from="1601794667907" duration="11697000" />
       <workItem from="1601816837443" duration="205000" />
       <workItem from="1601817166751" duration="6039000" />
-      <workItem from="1601877164908" duration="9936000" />
+      <workItem from="1601877164908" duration="16002000" />
     </task>
     <servers />
   </component>

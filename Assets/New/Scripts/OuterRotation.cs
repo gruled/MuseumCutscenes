@@ -11,6 +11,7 @@ public class OuterRotation : MonoBehaviour
     [SerializeField] private Text _text;
     [SerializeField] private float _deltaMove;
     public float _moving;
+    public float _currSpeed;
     [SerializeField] private float _threshold;
     void OnEnable()
     {
@@ -19,6 +20,15 @@ public class OuterRotation : MonoBehaviour
         _parent = transform.parent;
         StartCoroutine(_rotation());
         StartCoroutine(_toText());
+    }
+    
+    private IEnumerator _speedUp()
+    {
+        _currSpeed = 0.0f;
+        Sequence sequence = DOTween.Sequence();
+        sequence.Insert(0.0f, DOTween.To(() => _currSpeed, x => _currSpeed = x, _speed, 1.0f));
+        sequence.Play();
+        yield return new WaitWhile(sequence.IsPlaying);
     }
 
     private IEnumerator _rotation()
@@ -30,10 +40,13 @@ public class OuterRotation : MonoBehaviour
                 Touch touch = Input.GetTouch(0);
                 switch (touch.phase)
                 {
+                    case TouchPhase.Began:
+                        StartCoroutine(_speedUp());
+                        break;
                     case TouchPhase.Moved:
                         if (touch.deltaPosition.magnitude>_threshold)
                         {
-                            _parent.Rotate(new Vector3(-touch.deltaPosition.y, touch.deltaPosition.x, 0.0f), _speed);
+                            _parent.Rotate(new Vector3(-touch.deltaPosition.y, touch.deltaPosition.x, 0.0f), _speed*(touch.deltaPosition.magnitude/touch.deltaTime));
                             _moving += touch.deltaPosition.magnitude;
                             if (_moving>_deltaMove)
                             {

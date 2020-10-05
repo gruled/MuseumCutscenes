@@ -430,10 +430,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000084525eba7494bab00c30f9229760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.7
+  _speed: 0.003
   _text: {fileID: 1965856357}
   _deltaMove: 600
   _moving: 0
+  _currSpeed: 0
+  _threshold: 0.001
 --- !u!114 &475851232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2145,10 +2147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea4e795f48739049afea1651a79013b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 0.007
   _text: {fileID: 1965856357}
   _deltaMove: 600
   _moving: 0
+  _currSpeed: 0
   _threshold: 1
 --- !u!114 &1767645732
 MonoBehaviour:
