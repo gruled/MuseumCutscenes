@@ -86,6 +86,7 @@
           <e p="Scripts" t="Include">
             <e p="ChangeState.cs" t="Include" />
             <e p="ExposureSkyBox.cs" t="Include" />
+            <e p="InnerObjectsLife.cs" t="Include" />
             <e p="InnerRotation.cs" t="Include" />
             <e p="OuterRotation.cs" t="Include" />
             <e p="OuterZoom.cs" t="Include" />
