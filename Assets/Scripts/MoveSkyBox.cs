@@ -22,7 +22,7 @@ public class MoveSkyBox : MonoBehaviour
         {
             _skyBox.SetFloat("_Rotation", rotation);
             rotation += _speed*buff;
-            if (rotation>30.0f||rotation<-30.0f)
+            if (rotation>15.0f||rotation<-15.0f)
             {
                 buff *= -1;
             }

@@ -13,6 +13,10 @@ public class OuterRotation : MonoBehaviour
     public float _moving;
     public float _currSpeed;
     [SerializeField] private float _threshold;
+    [SerializeField] private float enertionModifier;
+
+    private Vector3 _prevRotate;
+    private float _prevAngle;
     void OnEnable()
     {
         _moving = 0;
@@ -31,6 +35,24 @@ public class OuterRotation : MonoBehaviour
         yield return new WaitWhile(sequence.IsPlaying);
     }
 
+    private IEnumerator _enertion()
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence.Insert(0.0f, DOTween.To(() => _prevAngle, x => _prevAngle = x, 0.0f, 1.0f));
+        sequence.Play();
+        yield return new WaitWhile(sequence.IsPlaying);
+    }
+
+    private IEnumerator _enertionMove()
+    {
+        float endTime = Time.time + 1.0f;
+        while (endTime>Time.time)
+        {
+            _parent.Rotate(_prevRotate, _prevAngle*enertionModifier);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
     private IEnumerator _rotation()
     {
         while (true)
@@ -46,13 +68,19 @@ public class OuterRotation : MonoBehaviour
                     case TouchPhase.Moved:
                         if (touch.deltaPosition.magnitude>_threshold)
                         {
-                            _parent.Rotate(new Vector3(-touch.deltaPosition.y, touch.deltaPosition.x, 0.0f), _speed*(touch.deltaPosition.magnitude/touch.deltaTime));
+                            _prevRotate = new Vector3(-touch.deltaPosition.y, touch.deltaPosition.x, 0.0f);
+                            _prevAngle = _currSpeed * (touch.deltaPosition.magnitude / touch.deltaTime);
+                            _parent.Rotate(_prevRotate, _prevAngle);
                             _moving += touch.deltaPosition.magnitude;
                             if (_moving>_deltaMove)
                             {
                                 StartCoroutine(_outText());
                             }   
                         }
+                        break;
+                    case TouchPhase.Ended:
+                        StartCoroutine(_enertion());
+                        StartCoroutine(_enertionMove());
                         break;
                 }
             }

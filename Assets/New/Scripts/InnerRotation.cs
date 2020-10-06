@@ -16,6 +16,11 @@ public class InnerRotation : MonoBehaviour
     public float _currSpeed;
     [SerializeField] private float _threshold;
 
+
+    [SerializeField] private float enertionModifier;
+    private Vector3 _prevRotate;
+    private float _prevAngle;
+
     void OnEnable()
     {
         _currSpeed = 0.0f;
@@ -34,8 +39,24 @@ public class InnerRotation : MonoBehaviour
         yield return new WaitWhile(sequence.IsPlaying);
     }
 
-    
-    
+    private IEnumerator _enertion()
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence.Insert(0.0f, DOTween.To(() => _prevAngle, x => _prevAngle = x, 0.0f, 1.0f));
+        sequence.Play();
+        yield return new WaitWhile(sequence.IsPlaying);
+    }
+
+    private IEnumerator _enertionMove()
+    {
+        float endTime = Time.time + 1.0f;
+        while (endTime>Time.time)
+        {
+            _camera.transform.Rotate(_prevRotate, _prevAngle*enertionModifier);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
 
     private IEnumerator _rotate()
     {
@@ -50,8 +71,9 @@ public class InnerRotation : MonoBehaviour
                         StartCoroutine(_speedUp());
                         break;
                     case TouchPhase.Moved:
-                        _camera.transform.Rotate(new Vector3(touch.deltaPosition.y, -touch.deltaPosition.x, 0.0f),
-                            _currSpeed * (touch.deltaPosition.magnitude / touch.deltaTime));
+                        _prevRotate = new Vector3(touch.deltaPosition.y, -touch.deltaPosition.x, 0.0f);
+                        _prevAngle = _currSpeed * (touch.deltaPosition.magnitude / touch.deltaTime);
+                        _camera.transform.Rotate(_prevRotate, _prevAngle);
                         _camera.transform.rotation = Quaternion.Euler(_camera.transform.rotation.eulerAngles.x,
                             _camera.transform.rotation.eulerAngles.y, 0.0f);
                         _moving += touch.deltaPosition.magnitude;
@@ -59,6 +81,10 @@ public class InnerRotation : MonoBehaviour
                         {
                             StartCoroutine(_outText());
                         }
+                        break;
+                    case TouchPhase.Ended:
+                        StartCoroutine(_enertion());
+                        StartCoroutine(_enertionMove());
                         break;
                 }
             }

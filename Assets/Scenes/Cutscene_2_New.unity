@@ -436,6 +436,7 @@ MonoBehaviour:
   _moving: 0
   _currSpeed: 0
   _threshold: 0.001
+  enertionModifier: 0.7
 --- !u!114 &475851232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +479,7 @@ MonoBehaviour:
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
-    quality: 2
+    quality: 0
   fastApproximateAntialiasing:
     fastMode: 1
     keepAlpha: 0
@@ -1205,7 +1206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skyBox: {fileID: 2100000, guid: e8bc3c3fbc7bbe849bdd0a3f5c7165f2, type: 2}
-  _speed: 0.005
+  _speed: 0.0075
 --- !u!4 &1189573390
 Transform:
   m_ObjectHideFlags: 0
@@ -1535,6 +1536,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -4018088519665713965, guid: 8950c5736fae71644916b6a69d132121,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3801275871365521412, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1734,6 +1740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284604034959050970, guid: 8950c5736fae71644916b6a69d132121,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5063506805971886510, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
@@ -2216,6 +2227,7 @@ MonoBehaviour:
   _moving: 0
   _currSpeed: 0
   _threshold: 1
+  enertionModifier: 0.7
 --- !u!114 &1767645732
 MonoBehaviour:
   m_ObjectHideFlags: 0
