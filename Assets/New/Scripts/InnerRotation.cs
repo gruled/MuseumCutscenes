@@ -11,6 +11,7 @@ public class InnerRotation : MonoBehaviour
     [SerializeField] private float _speed;
     private Camera _camera;
     [SerializeField] private Text _text;
+    [SerializeField] private Image _spl;
     [SerializeField] private float _deltaMove;
     public float _moving;
     public float _currSpeed;
@@ -98,6 +99,7 @@ public class InnerRotation : MonoBehaviour
     {
         Sequence sequence = DOTween.Sequence();
         sequence.Insert(0.0f, _text.DOColor(Color.white, 0.3f));
+        sequence.Insert(0.0f, _spl.DOColor(Color.white, 0.3f));
         sequence.Play();
         yield return new WaitWhile(sequence.IsPlaying);
     }
@@ -106,6 +108,7 @@ public class InnerRotation : MonoBehaviour
     {
         Sequence sequence = DOTween.Sequence();
         sequence.Insert(0.0f, _text.DOColor(new Color(0.0f, 0.0f, 0.0f, 0.0f), 0.3f));
+        sequence.Insert(0.0f, _spl.DOColor(new Color(0.0f, 0.0f, 0.0f, 0.0f), 0.3f));
         sequence.Play();
         yield return new WaitWhile(sequence.IsPlaying);
     }
