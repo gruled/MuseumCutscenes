@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class ExposureSkyBox : MonoBehaviour
 {
-    [SerializeField] private Material _skyBox;
+    private Material _skyBox;
     private float _currExposure;
     
     void Start()
     {
+        _skyBox = RenderSettings.skybox;
         _currExposure = _skyBox.GetFloat("_Exposure");
         StartCoroutine(_exposure());
     }

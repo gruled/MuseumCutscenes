@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityEditor;
 using UnityEngine;
 
 public class MoveSkyBox : MonoBehaviour
 {
 
-    [SerializeField] private Material _skyBox;
+    private Material _skyBox;
     [SerializeField] private float _speed;
     void Start()
     {
+        _skyBox = RenderSettings.skybox;
         _skyBox.SetFloat("_Rotation", 0.0f);
         StartCoroutine(_rotate());
     }
