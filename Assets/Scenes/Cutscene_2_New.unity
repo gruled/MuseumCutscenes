@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16366091, g: 0.23406371, b: 0.3700524, a: 1}
+  m_IndirectSpecularColor: {r: 0.17861113, g: 0.2816481, b: 0.4508149, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
-    m_AtlasSize: 2048
+    m_AtlasSize: 4096
     m_AO: 1
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -485,6 +485,26 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &522995653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4018088519665713965, guid: 8950c5736fae71644916b6a69d132121,
+    type: 3}
+  m_PrefabInstance: {fileID: 1479139819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &522995657
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522995653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 548559895219441107, guid: 8950c5736fae71644916b6a69d132121, type: 3}
 --- !u!1 &524048257
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +683,11 @@ PrefabInstance:
       propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2303427126834958619, guid: 8d24e5495780f064aa49f68fac91bbdc,
+        type: 3}
+      propertyPath: m_ShadowAngle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,22 +706,22 @@ PrefabInstance:
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.58470905
+      value: 0.03399075
       objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.39977625
+      value: -0.93289953
       objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.48518315
+      value: 0.09147163
       objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5127296
+      value: 0.34666437
       objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
@@ -706,17 +731,17 @@ PrefabInstance:
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 12.22
+      value: 11.2
       objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90.2
+      value: -139.23
       objectReference: {fileID: 0}
     - target: {fileID: 2303427126834958628, guid: 8d24e5495780f064aa49f68fac91bbdc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -99.100006
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d24e5495780f064aa49f68fac91bbdc, type: 3}
@@ -755,7 +780,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
+  m_RepeatDelay: 0.1
   m_ForceModuleActive: 0
 --- !u!114 &719950860
 MonoBehaviour:
@@ -771,7 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_DragThreshold: 5
 --- !u!4 &719950861
 Transform:
   m_ObjectHideFlags: 0
@@ -1149,6 +1174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.0075
+  defaultPos: 54
 --- !u!4 &1189573390
 Transform:
   m_ObjectHideFlags: 0
@@ -1705,6 +1731,16 @@ PrefabInstance:
       propertyPath: m_ReceiveGI
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2496836713656075739, guid: 8950c5736fae71644916b6a69d132121,
+        type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2496836713656075739, guid: 8950c5736fae71644916b6a69d132121,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2491477526919160327, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2230,6 +2266,11 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4284604034959050970, guid: 8950c5736fae71644916b6a69d132121,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4458390907867639746, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
       propertyPath: m_CastShadows
@@ -2283,7 +2324,7 @@ PrefabInstance:
     - target: {fileID: 5519090845112865615, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 63
+      value: 4294967294
       objectReference: {fileID: 0}
     - target: {fileID: 5607429007956029010, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
@@ -2933,7 +2974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea4e795f48739049afea1651a79013b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.007
+  speed: 0.007
   _text: {fileID: 1965856357}
   _spl: {fileID: 1634478474}
   _deltaMove: 300

@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class OuterRotation : MonoBehaviour
 {
     private Transform _parent;
-    [SerializeField] private float _speed;
+    [FormerlySerializedAs("_speed")] [SerializeField] private float speed;
     [SerializeField] private Text _text;
     [SerializeField] private Image _spl;
     [SerializeField] private float _deltaMove;
@@ -24,14 +26,19 @@ public class OuterRotation : MonoBehaviour
         
         _parent = transform.parent;
         StartCoroutine(_rotation());
+        //StartCoroutine(_toText());
+    }
+
+    private void Awake()
+    {
         StartCoroutine(_toText());
     }
-    
+
     private IEnumerator _speedUp()
     {
         _currSpeed = 0.0f;
         Sequence sequence = DOTween.Sequence();
-        sequence.Insert(0.0f, DOTween.To(() => _currSpeed, x => _currSpeed = x, _speed, 1.0f));
+        sequence.Insert(0.0f, DOTween.To(() => _currSpeed, x => _currSpeed = x, speed, 1.0f));
         sequence.Play();
         yield return new WaitWhile(sequence.IsPlaying);
     }
@@ -85,7 +92,7 @@ public class OuterRotation : MonoBehaviour
                         break;
                 }
             }
-            yield return new WaitForSeconds(0.0001f);
+            yield return new WaitForSeconds(0.001f);
         }
     }
 

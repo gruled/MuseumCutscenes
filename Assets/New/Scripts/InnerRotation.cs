@@ -28,6 +28,11 @@ public class InnerRotation : MonoBehaviour
         _moving = 0;
         _camera = transform.GetComponent<Camera>();
         StartCoroutine(_rotate());
+        //StartCoroutine(_toText());
+    }
+
+    private void Awake()
+    {
         StartCoroutine(_toText());
     }
 
@@ -90,7 +95,7 @@ public class InnerRotation : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
