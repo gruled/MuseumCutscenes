@@ -8,17 +8,20 @@ public class FadeText : MonoBehaviour
 {
     [SerializeField] private Text text;
     [SerializeField] private float maxDistance;
+    [SerializeField] private Image hand;
     private float _dist;
     void Start()
     {
         _dist = 0.0f;
         text = GetComponent<Text>();
+        hand = GetComponentInChildren<Image>();
     }
 
     private IEnumerator _fade()
     {
         Sequence sequence = DOTween.Sequence();
         sequence.Insert(0.0f, text.DOColor(new Color(0.0f, 0.0f, 0.0f, 0.0f), 0.5f));
+        sequence.Insert(0.0f, hand.DOColor(new Color(0.0f, 0.0f, 0.0f, 0.0f), 0.5f));
         sequence.InsertCallback(0.5f, () => {text.gameObject.SetActive(false);});
         sequence.Play();
         yield return new WaitWhile(sequence.IsPlaying);

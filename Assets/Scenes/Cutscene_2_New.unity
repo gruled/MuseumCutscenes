@@ -978,8 +978,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d0688bcce05af8d49a75f6c6670f9755, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1493,7 +1493,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reset
+  m_Text: 
 --- !u!222 &1307879614
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3366,6 +3366,7 @@ MonoBehaviour:
   _btn: {fileID: 2076992739}
   _in: {fileID: 21300000, guid: 710752eba881f7f43a2fa973f26bc7f7, type: 3}
   _out: {fileID: 21300000, guid: d0038b079705fa94ba671088c9a989b1, type: 3}
+  level: {fileID: 735486132}
 --- !u!1 &1965856354
 GameObject:
   m_ObjectHideFlags: 0

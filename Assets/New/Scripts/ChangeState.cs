@@ -13,6 +13,7 @@ public class ChangeState : MonoBehaviour
     [SerializeField] private Image _btn;
     [SerializeField] private Sprite _in;
     [SerializeField] private Sprite _out;
+    [SerializeField] private Button level;
     
      void Start()
     {
@@ -20,6 +21,7 @@ public class ChangeState : MonoBehaviour
         //_isOuter = true;
         _outerCamera.gameObject.SetActive(true);
         _innerCamera.gameObject.SetActive(false);
+        level.gameObject.SetActive(false);
     }
 
     public void Revert()
@@ -40,12 +42,14 @@ public class ChangeState : MonoBehaviour
                 _innerCamera.gameObject.SetActive(true);
                 _outerCamera.gameObject.SetActive(false);
                 _btn.sprite = _out;
+                level.gameObject.SetActive(true);
             }
             else
             {
                 _innerCamera.gameObject.SetActive(false);
                 _outerCamera.gameObject.SetActive(true);
                 _btn.sprite = _in;
+                level.gameObject.SetActive(false);
             }
         });
         sequence.Insert(0.5f, _image.DOColor(new Color(0.0f,0.0f,0.0f,0.0f), 0.5f));
