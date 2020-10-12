@@ -18,13 +18,7 @@ public class Zoom : MonoBehaviour
     {
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.x, (min+max)/2);
         _enertion = StartCoroutine(_move());
-        try
-        {
-            StopCoroutine(_enertion);
-        }
-        catch (Exception e)
-        {
-        }
+        _stop();
     }
 
     private IEnumerator _move()
@@ -47,7 +41,7 @@ public class Zoom : MonoBehaviour
             {
                 break;
             }
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
     }
 
@@ -61,24 +55,12 @@ public class Zoom : MonoBehaviour
             {
                 _prevDist = Vector2.Distance(touch0.position, touch1.position);
                 _currDist = _prevDist;
-                try
-                {
-                    StopCoroutine(_enertion);
-                }
-                catch (Exception e)
-                {
-                }
+                _stop();
             }
 
             if (touch0.phase == TouchPhase.Moved || touch1.phase == TouchPhase.Moved)
             {
-                try
-                {
-                    StopCoroutine(_enertion);
-                }
-                catch (Exception e)
-                {
-                }
+                _stop();
                 _prevDist = _currDist;
                 _currDist = Vector2.Distance(touch0.position, touch1.position);
                 transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.x, transform.localPosition.z+(_currDist-_prevDist)*speed);
@@ -95,16 +77,20 @@ public class Zoom : MonoBehaviour
 
             if (touch0.phase==TouchPhase.Ended||touch1.phase == TouchPhase.Ended)
             {
-                try
-                {
-                    StopCoroutine(_enertion);
-                }
-                catch (Exception e)
-                {
-                }
+                _stop();
                 _enertion = StartCoroutine(_move());
             }
             
+        }
+    }
+    private void _stop()
+    {
+        try
+        {
+            StopCoroutine(_enertion);
+        }
+        catch (Exception e)
+        {
         }
     }
 }

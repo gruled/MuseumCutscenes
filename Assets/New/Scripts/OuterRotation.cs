@@ -33,7 +33,7 @@ public class OuterRotation : MonoBehaviour
          {
             break;
          }
-         yield return new WaitForSeconds(Time.deltaTime);
+         yield return new WaitForSeconds(Time.fixedDeltaTime);
       }
    }
    
