@@ -86,10 +86,11 @@
           <e p="Scripts" t="Include">
             <e p="ChangeState.cs" t="Include" />
             <e p="ExposureSkyBox.cs" t="Include" />
+            <e p="FadeText.cs" t="Include" />
             <e p="InnerObjectsLife.cs" t="Include" />
             <e p="InnerRotation.cs" t="Include" />
             <e p="OuterRotation.cs" t="Include" />
-            <e p="OuterZoom.cs" t="Include" />
+            <e p="Zoom.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">
@@ -117,12 +118,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Changer.cs" t="Include" />
-          <e p="InnerRotate.cs" t="Include" />
-          <e p="Manager.cs" t="Include" />
           <e p="MoveSkyBox.cs" t="Include" />
-          <e p="OuterRotate.cs" t="Include" />
-          <e p="Zoom.cs" t="Include" />
         </e>
         <e p="Stagit" t="Include">
           <e p="SkyboxEarthPlanets" t="Include">

@@ -20,16 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="632a2a91-130c-4bc7-850e-637705bc901c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MuseumCutscenes/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/OuterRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New/Scripts/OuterRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscene_2_New/ReflectionProbe-1.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveSkyBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveSkyBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Changer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Changer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InnerRotate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InnerRotate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveSkyBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveSkyBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OuterRotate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OuterRotate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zoom.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stagit/SkyboxEarthPlanets/skyboxes/skyboxv1_earth1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stagit/SkyboxEarthPlanets/skyboxes/skyboxv1_earth1.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,12 +52,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/New/Scripts/ChangeState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Changer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/New/Scripts/OuterZoom.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/New/Scripts/ExposureSkyBox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zoom.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InnerRotate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/New/Scripts/FadeText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/New/Scripts/Zoom.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -66,8 +74,10 @@
         <option value="$PROJECT_DIR$/Assets/New/Scripts/ChangeState.cs" />
         <option value="$PROJECT_DIR$/Assets/New/Scripts/ExposureSkyBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveSkyBox.cs" />
+        <option value="$PROJECT_DIR$/Assets/New/Scripts/Zoom.cs" />
         <option value="$PROJECT_DIR$/Assets/New/Scripts/OuterRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/New/Scripts/InnerRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/New/Scripts/FadeText.cs" />
       </list>
     </option>
   </component>
@@ -117,7 +127,7 @@
       <workItem from="1601962092896" duration="6804000" />
       <workItem from="1602141693289" duration="1099000" />
       <workItem from="1602223604859" duration="1362000" />
-      <workItem from="1602227331785" duration="7608000" />
+      <workItem from="1602227331785" duration="15850000" />
     </task>
     <servers />
   </component>
