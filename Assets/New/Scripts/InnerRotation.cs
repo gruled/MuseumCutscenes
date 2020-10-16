@@ -31,6 +31,7 @@ public class InnerRotation : MonoBehaviour
       while (true)
       {
          transform.parent.Rotate(_axis, angleShift);
+         transform.parent.rotation = Quaternion.Euler(transform.parent.rotation.eulerAngles.x,transform.parent.rotation.eulerAngles.y,0.0f);
          angleShift *= enertionModifier;
          if (Math.Abs(angleShift) < enertionThreshold)
          {
@@ -57,7 +58,10 @@ public class InnerRotation : MonoBehaviour
                _stop();
                _angle = speed * (touch.deltaPosition.magnitude / touch.deltaTime);
                _axis = new Vector3(touch.deltaPosition.normalized.y, -touch.deltaPosition.normalized.x, 0.0f);
-               transform.parent.Rotate(_axis, _angle);
+               transform.parent.Rotate(_axis, _angle, Space.World);
+               transform.parent.rotation = Quaternion.Euler(transform.parent.rotation.eulerAngles.x,transform.parent.rotation.eulerAngles.y,0.0f);
+               //Debug.Log(transform.parent.rotation.eulerAngles.x);
+               
                break;
             case TouchPhase.Ended:
                _stop();

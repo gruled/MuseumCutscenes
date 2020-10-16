@@ -286,7 +286,7 @@ PrefabInstance:
     - target: {fileID: -4018088519665713965, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967294
       objectReference: {fileID: 0}
     - target: {fileID: -3801275871365521412, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
@@ -1232,12 +1232,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 60.000004, y: 90, z: 0}
---- !u!4 &1200823242 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 62b0a160502603a4eb48fa115612b70a,
-    type: 3}
-  m_PrefabInstance: {fileID: 467528095}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1206747543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,8 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a59bef953745d449a583b58159ebe2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOuter: 1
-  _camera: {fileID: 34393996}
 --- !u!114 &1893319359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1819,8 +1811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266f8885c6c342d4c88035d80004d09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _outerPivot: {fileID: 1206747543}
 --- !u!114 &1893319360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,12 +1823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179e54e693b6cff4cbb719ad41db64ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _innerPivot: {fileID: 1356572766}
-  _outerPivot: {fileID: 581487063}
-  _image: {fileID: 18243803}
-  camLight: {fileID: 1559081132}
-  InnerCapsule: {fileID: 7601833}
-  OuterCapsule: {fileID: 1200823242}
 --- !u!114 &1893319361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,9 +1835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed3e17dfe3c26c40a6118cb586f2651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  FOVMax: 97
-  FOVMin: 23
 --- !u!114 &1893319362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,7 +1847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8243954a69621184ba1296f87e1e5a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.75
 --- !u!1 &1998829293
 GameObject:
   m_ObjectHideFlags: 0

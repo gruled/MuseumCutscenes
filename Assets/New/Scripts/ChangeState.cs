@@ -42,7 +42,7 @@ public class ChangeState : MonoBehaviour
                 _innerCamera.gameObject.SetActive(true);
                 _outerCamera.gameObject.SetActive(false);
                 _btn.sprite = _out;
-                level.gameObject.SetActive(true);
+                //level.gameObject.SetActive(true);
             }
             else
             {

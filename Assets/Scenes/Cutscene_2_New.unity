@@ -885,7 +885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &735486131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1851,7 +1851,7 @@ PrefabInstance:
     - target: {fileID: -4018088519665713965, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967294
       objectReference: {fileID: 0}
     - target: {fileID: -4018088519665713965, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
@@ -2507,6 +2507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284604034959050970, guid: 8950c5736fae71644916b6a69d132121,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4458390907867639746, guid: 8950c5736fae71644916b6a69d132121,
         type: 3}
@@ -3213,7 +3218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.01
   enertionThreshold: 0.01
-  enertionModifier: 0.97
+  enertionModifier: 0.83
 --- !u!114 &1767645732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3499,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   maxDistance: 300
-  hand: {fileID: 0}
 --- !u!1 &2076992736
 GameObject:
   m_ObjectHideFlags: 0
